@@ -1,0 +1,47 @@
+{
+  "name": "sbkfront",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Samba Bery KANE",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-deporder": "^1.1.0",
+    "gulp-htmlclean": "^2.7.15",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-size": "^2.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "stream-series": "^0.1.1",
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-busy": "^4.1.4",
+    "angular-local-storage": "^0.7.1",
+    "angular-resource": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "angular-spinkit": "^0.3.4",
+    "angular-ui-bootstrap": "^2.5.6",
+    "gulp": "^3.9.1",
+    "linq": "^3.0.9",
+    "loading-bar": "0.0.2",
+    "moment": "^2.19.1",
+    "ng-file-upload": "^12.2.13",
+    "toastr": "^2.1.2",
+    "ui-bootstrap": "^0.1.10",
+    "underscore": "^1.8.3"
+  }
+}

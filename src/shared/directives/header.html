@@ -1,0 +1,118 @@
+<header  class="site-header" width="100px" ;
+background-repeat:repeat;
+background-position:top left;
+background-attachment:fixed;
+background-color:" itemscope="itemscope" itemtype="http://schema.org/WPHeader"
+ng-controller="headerCtrl as vm"><!-- Site's Header -->
+<!-- @Header top -->
+<!-- #Header top -->
+<div class="logo-wrapper"><!-- Logo & hgroup -->
+	<div class="container">
+		<div class="row">
+			<div class="hgroup-sidebar col-md-12 col-sm-12">
+				<div class="col-sm-1 col-md-1 col-lg-12">
+
+				</div>
+				<div id="pt_search_widget-4" class=" col-md-3 widget widget_pt_search_widget">
+					<form class="pt-searchform" method="get" action="#">
+						<input id="s" name="s" type="text" class="searchtext" value="" placeholder="Text here..." tabindex="1">
+
+						<div class="select-wrapper">
+							<select class="search-select" name="product_cat">
+								<option value="">Categories</option>
+								<option ng-repeat="categorie in vm.categories track by $index">{{categorie.categorie.designation}}</option>
+							</select>
+						</div>
+						<button id="searchsubmit"  class="search-button" title="recherche" tabindex="2">
+							<i class="custom-icon-search"></i>
+						</button>
+
+						<input type="hidden" name="post_type" value="product" />
+					</form>
+
+				</div>
+				<div id="pt_woocommerce_widget_cart-3" class="widget woocommerce widget_shopping_cart">
+					<div class="inner-cart-content">
+						<div class="wrapper">
+							<div class="heading shopping-cart">
+								<i class="custom-icon-basket"></i>
+								<a class="cart-contents">
+									<span class="count  ">{{vm.nbrArts}}</span></a>
+								</div>
+								<div  class="widget_shopping_cart_content" style="opacity: 1;">
+
+									<ul  class="woocommerce-mini-cart cart_list product_list_widget ">
+										<li ng-repeat="c in vm.cart" class="woocommerce-mini-cart-item mini_cart_item">
+											<a ng-click="vm.removeArt(c.Article.id)" class="remove remove_from_cart_button" style="cursor:pointer;">×</a>
+											<a href="#/shop/uncategorized/campfire/">
+												<img width="80" height="80" ng-src="{{c.Photo[0].image}}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">{{c.Article.designation}}&nbsp;</a>
+												<dl class="variation">
+													<dt class="variation-SoldBy">Sold By:</dt>
+													<dd class="variation-SoldBy"><p><a href="#/vendors/vendor-shop-example/" target="_TOP">Vendor Shop Example </a></p>
+													</dd>
+												</dl>
+
+												<span class="quantity">{{c.Quantite}} × <span class="woocommerce-Price-amount amount">{{c.PrixUnitaire}}<span class="woocommerce-Price-currencySymbol">FCFA</span></span>
+											</span>                 
+										</li>
+									</ul>
+
+									<p class="woocommerce-mini-cart__total total"><strong>Subtotal:</strong> <span class="woocommerce-Price-amount amount">{{vm.total}}<span class="woocommerce-Price-currencySymbol">FCFA</span></span></p>
+
+
+									<p class="woocommerce-mini-cart__buttons buttons"><a ui-sref="cart" class="button wc-forward">View cart</a><a ui-sref="checkout" class="button checkout wc-forward">Checkout</a></p>
+
+
+								</div>
+							</div></div>
+							<script type="text/javascript">
+								jQuery(document).ready(function($){
+									$(window).load(function(){
+
+										var settings = {
+											interval: 100,
+											timeout: 200,
+											over: mousein_triger,
+											out: mouseout_triger
+										};
+
+										function mousein_triger(){
+											var add_height = $(this).find('.widget_shopping_cart_content').outerHeight();
+											$(this).addClass('hovered').find('.inner-cart-content').animate({ height:58+add_height, width:244}, 300, "easeInSine");
+										}
+										function mouseout_triger() {
+											$(this).removeClass('hovered').find('.inner-cart-content').animate({ width:73,height:56}, 300, "easeOutSine");
+										}
+
+										$('header .widget_shopping_cart').hoverIntent(settings);
+
+									});
+								});
+							</script>
+
+						</div>      </div>
+					</div>
+				</div>
+			</div><!-- end of Logo & hgroup -->
+
+			<div class="header-primary-nav"><!-- Primary nav -->
+				<div class="container">
+					<div class="row">
+						<nav class="primary-nav col-md-12 col-sm-12 col-lg-offset-2" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+							<div id="mega-menu-wrap-primary-nav" class="mega-menu-wrap"><div class="mega-menu-toggle" tabindex="0"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-right mega-toggle-block-1' id='mega-toggle-block-1'></div></div><ul id="mega-menu-primary-nav" class="mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade" data-effect-speed="200" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true"><li class='mega-target_blank mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-align-bottom-left mega-menu-flyout mega-has-icon mega-hide-text mega-menu-item-3324' id='mega-menu-item-3324'><a class="dashicons-admin-home mega-menu-link" href="#/" tabindex="0"></a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1774' id='mega-menu-item-1774'>
+								<a class="mega-menu-link" href="?page_id=3290" tabindex="0">QUI SOMMES NOUS</a></li>
+								<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1774'>
+									<a class="mega-menu-link" href="#/shop" tabindex="0">SHOP</a>
+								</li>
+								<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1774'>
+									<a class="mega-menu-link" href="?page_id=1066" tabindex="0">BLOG</a>
+								</li>
+								<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-3348' id='mega-menu-item-3348'>
+									<a class="mega-menu-link" href="?page_id=3307" tabindex="0">Contacts</a>
+								</li></ul></div>                          </nav>
+							</div>
+						</div>
+					</div><!-- end of Primary nav -->
+
+</header><!-- end of Site's Header -->

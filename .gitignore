@@ -1,0 +1,9 @@
+package-lock.json
+src/scripts/lib/star-rating.min.js
+src/styles/t.css
+src/styles/text.css
+src/styles/lib/star-rating.min.css
+src/views/info.css
+yarn.lock
+build/
+node_modules/

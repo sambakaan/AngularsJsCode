@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="fr" ng-app="app" ng-controller="headerCtrl as vm">
+    <head>
+        <meta charset="utf-8">
+        <!-- @include shared/meta.html -->    
+    </head>
+    <body class="woocommerce" >
+        <div class="site-wrapper">
+            <!-- Header -->
+            <app-header></app-header>
+            <!-- Corp du site -->
+
+            <div class="site-main container">
+                <!-- @Main Content-->
+                <div class="row" ui-view>
+                   
+                </div>
+                <!-- #Main Content-->
+            </div>
+            
+            <app-footer></app-footer>
+            <!-- @include shared/scripts.html -->
+        </div>
+    </body>
+</html>
